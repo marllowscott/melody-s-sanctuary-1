@@ -44,18 +44,18 @@ const About = () => {
                 <span className="text-primary">The Voice</span>
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                I wasn't born a confident communicator. In fact, I spent years terrified of 
-                speaking up in meetings, avoiding presentations at all costs, and feeling 
+                I wasn't born a confident communicator. In fact, I spent years terrified of
+                speaking up in meetings, avoiding presentations at all costs, and feeling
                 invisible in rooms full of louder voices.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                That changed when I decided to face my fears head-on. Through years of 
-                study, practice, and coaching, I transformed not just how I communicate — 
+                That changed when I decided to face my fears head-on. Through years of
+                study, practice, and coaching, I transformed not just how I communicate —
                 but how I show up in the world.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Now, I help others make that same transformation. Because I know firsthand 
-                that powerful communication isn't a gift you're born with — it's a skill 
+                Now, I help others make that same transformation. Because I know firsthand
+                that powerful communication isn't a gift you're born with — it's a skill
                 anyone can learn.
               </p>
             </div>
@@ -89,55 +89,40 @@ const About = () => {
 
           <div className="max-w-4xl mx-auto">
             <div className="space-y-12">
-              <div className="flex gap-8">
-                <div className="w-px bg-primary relative">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary" />
-                </div>
-                <div>
-                  <p className="text-primary font-semibold mb-2">The Beginning</p>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    Overcoming Fear
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Started my career in marketing, where I quickly realized that technical 
-                    skills weren't enough. The people who advanced were the ones who could 
-                    communicate their ideas with confidence and clarity.
-                  </p>
-                </div>
+              <div>
+                <p className="text-primary font-semibold mb-2">The Beginning</p>
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  Overcoming Fear
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Started my career in marketing, where I quickly realized that technical
+                  skills weren't enough. The people who advanced were the ones who could
+                  communicate their ideas with confidence and clarity.
+                </p>
               </div>
 
-              <div className="flex gap-8">
-                <div className="w-px bg-primary relative">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary" />
-                </div>
-                <div>
-                  <p className="text-primary font-semibold mb-2">The Transformation</p>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    Finding My Voice
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Invested in my own development — hiring coaches, studying communication 
-                    science, practicing relentlessly. Within two years, I went from avoiding 
-                    the spotlight to seeking it out.
-                  </p>
-                </div>
+              <div>
+                <p className="text-primary font-semibold mb-2">The Transformation</p>
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  Finding My Voice
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Invested in my own development — hiring coaches, studying communication
+                  science, practicing relentlessly. Within two years, I went from avoiding
+                  the spotlight to seeking it out.
+                </p>
               </div>
 
-              <div className="flex gap-8">
-                <div className="w-px bg-primary relative">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary" />
-                </div>
-                <div>
-                  <p className="text-primary font-semibold mb-2">The Calling</p>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    Becoming a Coach
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Colleagues started asking for help with their own communication challenges. 
-                    That's when I realized my true calling wasn't climbing the corporate ladder — 
-                    it was helping others find their voice.
-                  </p>
-                </div>
+              <div>
+                <p className="text-primary font-semibold mb-2">The Calling</p>
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  Becoming a Coach
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Colleagues started asking for help with their own communication challenges.
+                  That's when I realized my true calling wasn't climbing the corporate ladder —
+                  it was helping others find their voice.
+                </p>
               </div>
             </div>
           </div>
@@ -158,7 +143,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div 
+              <div
                 key={index}
                 className="text-center p-8"
               >
@@ -185,11 +170,11 @@ const About = () => {
               Let's Write Your Story
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-              Your communication transformation starts with a single conversation. 
+              Your communication transformation starts with a single conversation.
               I'd love to hear about your goals and how I can help you achieve them.
             </p>
-            <Button 
-              asChild 
+            <Button
+              asChild
               size="lg"
               className="rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg px-10 py-6 group"
             >
