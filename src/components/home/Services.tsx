@@ -33,7 +33,7 @@ const Services = () => {
             Transform Your Communication
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Focused, results-driven coaching designed to elevate how you communicate, 
+            Focused, results-driven coaching designed to elevate how you communicate,
             influence, and lead.
           </p>
         </div>
@@ -41,9 +41,9 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {services.map((service, index) => (
-            <div 
+            <div
               key={index}
-              className="group bg-card rounded-lg p-8 border border-border hover:border-primary/50 transition-all duration-300"
+              className="group bg-card rounded-lg p-8 border border-primary hover:border-primary/80 transition-all duration-300"
             >
               <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 <service.icon className="w-7 h-7 text-primary" />
@@ -60,8 +60,8 @@ const Services = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button 
-            asChild 
+          <Button
+            asChild
             size="lg"
             className="rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 group"
           >

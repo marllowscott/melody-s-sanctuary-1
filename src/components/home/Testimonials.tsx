@@ -35,13 +35,12 @@ const Testimonials = () => {
         {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div 
+            <div
               key={index}
-              className="bg-card rounded-lg p-8 border border-border relative"
+              className="bg-card rounded-lg p-8 border border-primary relative"
             >
-              <Quote className="w-10 h-10 text-primary/30 absolute top-6 right-6" />
               <p className="text-lg text-foreground leading-relaxed mb-8">
-                "{testimonial.quote}"
+                {testimonial.quote}
               </p>
               <div>
                 <p className="font-semibold text-foreground">{testimonial.name}</p>

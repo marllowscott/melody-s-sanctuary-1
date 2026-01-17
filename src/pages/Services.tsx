@@ -119,7 +119,7 @@ const ServicesPage = () => {
             {outcomes.map((outcome, index) => (
               <div 
                 key={index}
-                className="bg-card rounded-lg p-8 border border-border text-center"
+                className="bg-card rounded-lg p-8 border border-primary text-center"
               >
                 <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-6">
                   <outcome.icon className="w-8 h-8 text-primary" />
