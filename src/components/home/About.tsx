@@ -11,8 +11,9 @@ const personSchema = {
   "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
   "url": window.location.href,
   "sameAs": [
-    "https://www.linkedin.com/in/yourprofile",
-    "https://twitter.com/yourhandle"
+    "https://www.linkedin.com/in/melody-chipo-njanji-makuwaza-65b1782a",
+    "https://www.facebook.com/DialoguesWithMel",
+    "https://www.instagram.com/dialogueswithmel/"
   ]
 };
 
@@ -37,7 +38,7 @@ const About = () => {
           <div className="relative" itemProp="image" itemScope itemType="https://schema.org/ImageObject">
             <div className="rounded-lg overflow-hidden h-full">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                src="/melody.png"
                 alt="Melody, professional communication coach, helping professionals enhance their speaking skills"
                 className="w-full h-full object-cover"
                 loading="lazy"

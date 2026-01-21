@@ -64,7 +64,7 @@ const About = () => {
             <div className="relative">
               <div className="aspect-[3/4] rounded-lg overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
+                  src="/melody.png"
                   alt="Melody - Communication Coach"
                   className="w-full h-full object-cover"
                 />

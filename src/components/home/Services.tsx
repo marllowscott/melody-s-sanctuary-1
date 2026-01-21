@@ -1,21 +1,18 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Target, Users, Mic } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Services = () => {
   const services = [
     {
-      icon: Target,
       title: "1:1 Coaching",
       description: "Personalized sessions tailored to your specific goals, challenges, and communication style.",
     },
     {
-      icon: Users,
       title: "Executive Presence",
       description: "Develop the gravitas and authority that commands attention and inspires confidence.",
     },
     {
-      icon: Mic,
       title: "Public Speaking",
       description: "Master the stage. From TED talks to boardroom presentations, own every moment.",
     },
@@ -45,10 +42,16 @@ const Services = () => {
               key={index}
               className="group bg-card rounded-lg p-8 border border-primary hover:border-primary/80 transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-7 h-7 text-primary" />
+              <div className="w-14 h-14 flex items-center justify-center mb-6">
+                <img
+                  src={`/card-${index + 1}-icon.svg`}
+                  alt=""
+                  className="w-7 h-7 text-foreground"
+                  width={28}
+                  height={28}
+                />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-semibold text-foreground mb-4">
                 {service.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">

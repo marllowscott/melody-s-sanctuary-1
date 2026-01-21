@@ -15,33 +15,50 @@ const Book = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
 
-    toast({
-      title: "Request received!",
-      description: "I'll review your inquiry and get back to you within 24-48 hours.",
-    });
+    try {
+      const response = await fetch('https://formspree.io/f/mreeargb', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
 
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
+      if (response.ok) {
+        toast({
+          title: "Thank you!",
+          description: "Your inquiry has been sent. I'll be in touch soon to schedule our call.",
+        });
+        form.reset();
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was a problem submitting your inquiry. Please try again later.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const features = [
     {
-      icon: Calendar,
       title: "Flexible Scheduling",
-      description: "Sessions are scheduled around your availability.",
+      description: "Book sessions that fit your busy calendar",
     },
     {
-      icon: Clock,
-      title: "60-90 Minute Sessions",
-      description: "Deep, focused work on your communication goals.",
+      title: "30-Minute Consult",
+      description: "Free initial consultation to discuss your needs",
     },
     {
-      icon: Video,
-      title: "Virtual or In-Person",
-      description: "Meet online or at my LA studio — your choice.",
+      title: "Quick Response",
+      description: "Hear back within 24 hours",
     },
   ];
 
@@ -60,7 +77,7 @@ const Book = () => {
               <span className="text-primary">Together</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Ready to transform your communication? Fill out the form below and 
+              Ready to transform your communication? Fill out the form below and
               I'll be in touch to discuss how we can work together.
             </p>
           </div>
@@ -68,14 +85,23 @@ const Book = () => {
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
             {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-7 h-7 text-primary" />
+              <div
+                key={index}
+                className="group bg-card rounded-lg p-8 border border-primary hover:border-primary/80 transition-all duration-300"
+              >
+                <div className="w-14 h-14 flex items-center justify-center mb-6">
+                  <img
+                    src={`/card-${index + 1}-icon.svg`}
+                    alt=""
+                    className="w-7 h-7 text-foreground"
+                    width={28}
+                    height={28}
+                  />
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
+                <h3 className="text-xl font-semibold text-foreground mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -96,7 +122,12 @@ const Book = () => {
                 Tell me a bit about yourself and what you're looking to achieve.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                action="https://formspree.io/f/mreeargb"
+                method="POST"
+                onSubmit={handleSubmit}
+                className="space-y-6"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="firstName" className="text-foreground">

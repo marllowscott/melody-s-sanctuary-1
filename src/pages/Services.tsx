@@ -46,7 +46,7 @@ const ServicesPage = () => {
               <span className="text-primary">Coaching</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Intensive, personalized coaching designed to transform how you communicate, 
+              Intensive, personalized coaching designed to transform how you communicate,
               influence, and lead. Your goals. Your pace. Your breakthrough.
             </p>
           </div>
@@ -66,12 +66,12 @@ const ServicesPage = () => {
                 What You Get
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Every coaching engagement is fully customized to your unique situation, 
-                goals, and communication challenges. Whether you're preparing for a 
-                high-stakes presentation, developing executive presence, or building 
+                Every coaching engagement is fully customized to your unique situation,
+                goals, and communication challenges. Whether you're preparing for a
+                high-stakes presentation, developing executive presence, or building
                 overall communication confidence — I meet you where you are.
               </p>
-              
+
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start gap-3">
@@ -88,8 +88,8 @@ const ServicesPage = () => {
             <div className="relative">
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
-                  alt="Coaching session"
+                  src="/team.png"
+                  alt="Professional coaching team"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -110,14 +110,14 @@ const ServicesPage = () => {
               What You'll Achieve
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Beyond techniques — we build lasting transformation in how you show up 
+              Beyond techniques — we build lasting transformation in how you show up
               and communicate.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {outcomes.map((outcome, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-card rounded-lg p-8 border border-primary text-center"
               >
@@ -158,7 +158,7 @@ const ServicesPage = () => {
                   Discovery Call
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We start with a complimentary call to understand your goals, 
+                  We start with a complimentary call to understand your goals,
                   challenges, and whether we're a good fit.
                 </p>
               </div>
@@ -171,7 +171,7 @@ const ServicesPage = () => {
                   Custom Plan
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  I create a personalized coaching roadmap based on your specific 
+                  I create a personalized coaching roadmap based on your specific
                   situation and objectives.
                 </p>
               </div>
@@ -184,7 +184,7 @@ const ServicesPage = () => {
                   Transform
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Through regular sessions and practice, we build the skills and 
+                  Through regular sessions and practice, we build the skills and
                   confidence that create lasting change.
                 </p>
               </div>
@@ -201,11 +201,11 @@ const ServicesPage = () => {
               Ready to Begin?
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-              Investment in coaching varies based on your goals and engagement length. 
+              Investment in coaching varies based on your goals and engagement length.
               Let's discuss what's right for you.
             </p>
-            <Button 
-              asChild 
+            <Button
+              asChild
               size="lg"
               className="rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg px-10 py-6 group"
             >

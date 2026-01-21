@@ -1,6 +1,4 @@
-import { Quote } from "lucide-react";
-
-const Testimonials = () => {
+ const Testimonials = () => {
   const testimonials = [
     {
       quote: "Working with Melody transformed my career. I went from dreading presentations to actively seeking speaking opportunities.",
@@ -39,6 +37,11 @@ const Testimonials = () => {
               key={index}
               className="bg-card rounded-lg p-8 border border-primary relative"
             >
+              <img
+                src={`/card-${index + 1}-icon.svg`}
+                alt="Icon"
+                className="w-7 h-7 mb-6"
+              />
               <p className="text-lg text-foreground leading-relaxed mb-8">
                 {testimonial.quote}
               </p>
