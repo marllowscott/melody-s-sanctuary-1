@@ -49,16 +49,16 @@ const Book = () => {
 
   const features = [
     {
-      title: "Flexible Scheduling",
-      description: "Book sessions that fit your busy calendar",
+      title: "Executive Coaching – BOLD SPEAKING",
+      description: "One-on-one coaching focused on confidence, communication, presence and leadership visibility.",
     },
     {
-      title: "30-Minute Consult",
-      description: "Free initial consultation to discuss your needs",
+      title: "Open Programmes",
+      description: "BOLD SPEAKING – Group Coaching and English Fluency & Confident Communication.",
     },
     {
-      title: "Quick Response",
-      description: "Hear back within 24 hours",
+      title: "Speaking Engagements",
+      description: "Keynote topics on leadership confidence, communication with impact, executive presence, and leadership visibility.",
     },
   ];
 
@@ -67,18 +67,17 @@ const Book = () => {
       {/* Hero Section */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-16 -mt-[77px] md:mt-0">
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
-              BOOK ME
+              SPEAKING & COACHING
             </p>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Let's Work
+              Melody<span className="hidden md:inline"> — </span>Confidence Coach &
               <br />
-              <span className="text-primary">Together</span>
+              <span className="text-primary">Leadership Consultant</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Ready to transform your communication? Fill out the form below and
-              I'll be in touch to discuss how we can work together.
+              Melody specialises in leadership communication, executive presence and visibility. She works with executives, professionals and emerging leaders to strengthen how they show up, communicate and influence, particularly in meetings, presentations, client engagements and other high-stakes moments.
             </p>
           </div>
 
@@ -87,23 +86,17 @@ const Book = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-card rounded-lg p-8 border border-primary hover:border-primary/80 transition-all duration-300"
+                className="group bg-card rounded-lg p-8 border-2 border-primary/20 hover:border-primary/80 transition-all duration-300 relative text-center"
               >
-                <div className="w-14 h-14 flex items-center justify-center mb-6">
-                  <img
-                    src={`/card-${index + 1}-icon.svg`}
-                    alt=""
-                    className="w-7 h-7 text-foreground"
-                    width={28}
-                    height={28}
-                  />
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <div className="text-6xl font-bold text-primary">{index + 1}</div>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-lg text-primary leading-relaxed mb-8">
                   {feature.description}
                 </p>
+                <div>
+                  <p className="font-semibold text-primary">{feature.title}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -111,15 +104,15 @@ const Book = () => {
       </section>
 
       {/* Form Section */}
-      <section className="py-24 bg-secondary">
+      <section className="py-16 bg-secondary">
         <div className="container mx-auto px-6">
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-card rounded-lg p-8 md:p-12 border border-border">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-card rounded-lg p-8 md:p-12 border border-border text-center md:text-left">
               <h2 className="text-2xl font-bold text-foreground mb-2">
-                Booking Inquiry
+                Get In Touch
               </h2>
               <p className="text-muted-foreground mb-8">
-                Tell me a bit about yourself and what you're looking to achieve.
+                Interested in coaching or speaking? Let's discuss how we can work together.
               </p>
 
               <form
@@ -183,7 +176,7 @@ const Book = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="goals" className="text-foreground">
-                    What are your communication goals? *
+                    What are your goals? *
                   </Label>
                   <Textarea
                     id="goals"
@@ -209,7 +202,7 @@ const Book = () => {
 
                 <div className="space-y-2">
                   <Label htmlFor="referral" className="text-foreground">
-                    How did you hear about me?
+                    How did you hear about us?
                   </Label>
                   <Input
                     id="referral"

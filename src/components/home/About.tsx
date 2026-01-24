@@ -28,14 +28,14 @@ const About = () => {
 
   return (
     <section
-      className="py-24 bg-secondary"
+      className="py-24 bg-[url('/after-hero.png')] md:bg-secondary"
       itemScope
       itemType="https://schema.org/Person"
     >
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
-          <div className="relative" itemProp="image" itemScope itemType="https://schema.org/ImageObject">
+          <div className="relative mt-[90px]" itemProp="image" itemScope itemType="https://schema.org/ImageObject">
             <div className="rounded-lg overflow-hidden h-full">
               <img
                 src="/melody.png"
@@ -52,33 +52,35 @@ const About = () => {
           </div>
 
           {/* Content */}
-          <div>
-            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4" itemProp="jobTitle">
-              MEET MELODY | Communication Coach
+          <div className="text-center md:text-left mt-[77px] md:mt-0">
+            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
+              OUR APPROACH
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight" itemProp="headline">
-              Your Partner in <span className="text-primary">Communication Excellence</span>
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+              Addressing the Gap in <span className="text-primary">Leadership Communication</span>
             </h1>
-            <div itemProp="description">
+            <div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                For over a decade, I've helped <strong>executives, entrepreneurs, and emerging leaders</strong>
-                transform their communication skills. My approach combines <strong>proven techniques</strong> with
-                <strong>personalized coaching</strong> to unlock your authentic voice and boost your professional presence.
+                Many capable leaders don't struggle because they lack competence. They struggle because their message doesn't land, their presence is underestimated or confidence wavers when it matters most.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Whether you're preparing for a <strong>keynote speech, high-stakes negotiation, or leadership presentation</strong>,
-                or simply want to communicate with more impact in daily interactions — I provide tailored coaching
-                to help you achieve your communication goals and drive meaningful results.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                We address that gap. We are a leadership consultancy specialising in human skills development solutions. Our work strengthens how leaders communicate, show up and influence, particularly where clarity, confidence and credibility are critical.
               </p>
+              <ul className="text-lg text-muted-foreground leading-relaxed mb-8 list-disc list-inside">
+                <li>Leadership communication</li>
+                <li>Executive presence</li>
+                <li>Public speaking for leaders</li>
+                <li>Leadership visibility</li>
+                <li>Confidence under pressure</li>
+              </ul>
             </div>
             <Button
               asChild
               variant="outline"
               className="rounded-lg border-border text-foreground hover:bg-background hover:text-foreground font-semibold px-8 mx-auto"
-              aria-label="Learn more about Melody's coaching journey and methodology"
             >
-              <Link to="/about" itemProp="url">
-                My Full Story <span className="sr-only">about Melody's communication coaching</span>
+              <Link to="/services">
+                Our Work
               </Link>
             </Button>
           </div>

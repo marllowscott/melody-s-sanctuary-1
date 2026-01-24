@@ -1,4 +1,4 @@
- const Testimonials = () => {
+const Testimonials = () => {
   const testimonials = [
     {
       quote: "Working with Melody transformed my career. I went from dreading presentations to actively seeking speaking opportunities.",
@@ -18,8 +18,12 @@
   ];
 
   return (
-    <section className="py-24 bg-secondary">
-      <div className="container mx-auto px-6">
+    <section className="py-24 bg-secondary relative">
+      {/* Background Image */}
+      <div className="absolute inset-0 bg-cover bg-center hidden md:block" style={{ backgroundImage: 'url(/voices-of-transformation.jpg)' }}>
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
+      <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
@@ -35,19 +39,17 @@
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-card rounded-lg p-8 border border-primary relative"
+              className="group bg-card rounded-lg p-8 border-2 border-primary/20 hover:border-primary/80 transition-all duration-300 relative text-center"
             >
-              <img
-                src={`/card-${index + 1}-icon.svg`}
-                alt="Icon"
-                className="w-7 h-7 mb-6"
-              />
-              <p className="text-lg text-foreground leading-relaxed mb-8">
+              <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                <div className="text-6xl font-bold text-primary">{index + 1}</div>
+              </div>
+              <p className="text-lg text-primary leading-relaxed mb-8">
                 {testimonial.quote}
               </p>
               <div>
-                <p className="font-semibold text-foreground">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                <p className="font-semibold text-primary">{testimonial.name}</p>
+                <p className="text-sm text-primary">{testimonial.title}</p>
               </div>
             </div>
           ))}

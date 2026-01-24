@@ -8,10 +8,10 @@ const Header = () => {
   const location = useLocation();
 
   const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/services", label: "Services" },
-    { path: "/book", label: "Book Me" },
+    { path: "/", label: "Overview" },
+    { path: "/services", label: "Our Work" },
+    { path: "/about", label: "Who We Serve" },
+    { path: "/book", label: "Speaking & Coaching" },
     { path: "/contact", label: "Contact" },
   ];
 
@@ -33,9 +33,9 @@ const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium tracking-wide transition-colors hover:text-primary ${
-                  isActive(link.path) ? "text-primary" : "text-muted-foreground"
-                }`}
+                onClick={link.path === "/" ? () => window.scrollTo(0, 0) : undefined}
+                className={`text-sm font-medium tracking-wide transition-colors hover:text-primary ${isActive(link.path) ? "text-primary" : "text-muted-foreground"
+                  }`}
               >
                 {link.label.toUpperCase()}
               </Link>
@@ -45,7 +45,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button asChild className="rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-6">
-              <Link to="/book">Work With Me</Link>
+              <Link to="/contact">Request a Conversation</Link>
             </Button>
           </div>
 
@@ -67,16 +67,18 @@ const Header = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`text-lg font-medium tracking-wide transition-colors hover:text-primary ${
-                    isActive(link.path) ? "text-primary" : "text-muted-foreground"
-                  }`}
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    if (link.path === "/") window.scrollTo(0, 0);
+                  }}
+                  className={`text-lg font-medium tracking-wide transition-colors hover:text-primary ${isActive(link.path) ? "text-primary" : "text-muted-foreground"
+                    }`}
                 >
                   {link.label}
                 </Link>
               ))}
               <Button asChild className="mt-4 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
-                <Link to="/book" onClick={() => setIsMenuOpen(false)}>Work With Me</Link>
+                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Request a Conversation</Link>
               </Button>
             </div>
           </div>

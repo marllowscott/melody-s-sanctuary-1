@@ -52,46 +52,41 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-16 -mt-[77px] md:mt-0">
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
               CONTACT
             </p>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Get In
-              <br />
-              <span className="text-primary">Touch</span>
+              Get in <span className="text-primary">Touch</span>
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Have a question, media inquiry, or just want to say hello?
-              I'd love to hear from you.
-            </p>
           </div>
 
           {/* Contact Info */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto mb-16">
-            <div className="flex items-center gap-4 justify-center">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Mail className="w-6 h-6 text-primary" />
+          <div className="bg-card rounded-lg p-8 border border-border max-w-2xl mx-auto mb-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 rounded-lg flex items-center justify-center animate-pulse mx-auto mb-2">
+                  <Mail className="w-6 h-6 text-primary" />
+                </div>
+                <p className="text-sm text-muted-foreground mb-2">Email</p>
+                <div className="space-y-1">
+                  <a href="mailto:info@audaxleadership.com" className="text-foreground font-medium hover:text-primary block">info@audaxleadership.com</a>
+                  <a href="mailto:team@audaxleadership.com" className="text-foreground font-medium hover:text-primary block">team@audaxleadership.com</a>
+                  <a href="mailto:melody@audaxleadership.com" className="text-foreground font-medium hover:text-primary block">melody@audaxleadership.com</a>
+                  <a href="mailto:audaxleadership@gmail.com" className="text-foreground font-medium hover:text-primary block">audaxleadership@gmail.com</a>
+                </div>
               </div>
-              <div className="space-y-1">
-                <p className="text-sm text-muted-foreground">Email</p>
-                <a href="mailto:info@audaxleadership.com" className="text-foreground font-medium hover:text-primary block">info@audaxleadership.com</a>
-                <a href="mailto:team@audaxleadership.com" className="text-foreground font-medium hover:text-primary block">team@audaxleadership.com</a>
-                <a href="mailto:melody@audaxleadership.com" className="text-foreground font-medium hover:text-primary block">melody@audaxleadership.com</a>
-                <a href="mailto:audaxleadership@gmail.com" className="text-foreground font-medium hover:text-primary block">audaxleadership@gmail.com</a>
-              </div>
-            </div>
-            <div className="flex items-center gap-4 justify-center">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <MapPin className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">Phone</p>
-                <a href="tel:+263735402184" className="text-foreground font-medium hover:text-primary">+263 73 540 2184</a>
-
-                <div className="mt-4">
+              <div className="space-y-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center animate-pulse mx-auto mb-2">
+                    <MapPin className="w-6 h-6 text-primary" />
+                  </div>
+                  <p className="text-sm text-muted-foreground mb-2">Phone</p>
+                  <a href="tel:+263735402184" className="text-foreground font-medium hover:text-primary">+263 73 540 2184</a>
+                </div>
+                <div className="text-center">
                   <p className="text-sm text-muted-foreground mb-2">Connect</p>
-                  <div className="flex gap-4">
+                  <div className="flex gap-4 justify-center">
                     <a href="https://www.facebook.com/MelodyMakuwaza" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary">
                       <span className="sr-only">Facebook</span>
                       <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -125,15 +120,15 @@ const Contact = () => {
       </section>
 
       {/* Form Section */}
-      <section className="py-24 bg-secondary">
+      <section className="py-16 bg-secondary">
         <div className="container mx-auto px-6">
-          <div className="max-w-xl mx-auto">
-            <div className="bg-card rounded-lg p-8 md:p-12 border border-border">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-card rounded-lg p-8 md:p-12 border border-border text-center md:text-left">
               <h2 className="text-2xl font-bold text-foreground mb-2">
                 Send a Message
               </h2>
               <p className="text-muted-foreground mb-8">
-                Fill out the form below and I'll get back to you as soon as possible.
+                If you are developing leaders, strengthening client-facing capability or looking for a speaker or facilitator, we would be glad to explore how we can support your goals.
               </p>
 
               <form

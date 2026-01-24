@@ -1,33 +1,78 @@
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, MessageCircle, Sparkles, Target } from "lucide-react";
+import { ArrowRight, Check, Sparkles, Target } from "lucide-react";
+
+const ClarityIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="w-8 h-8 text-primary">
+    <path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" strokeWidth="0.5" stroke="currentColor" />
+    <circle cx="16" cy="10" r="0" fill="currentColor" strokeWidth="0.5" stroke="currentColor">
+      <animate attributeName="r" begin=".67" calcMode="spline" dur="1.5s" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite" values="0;1.75;0;0" />
+    </circle>
+    <circle cx="12" cy="10" r="0" fill="currentColor" strokeWidth="0.5" stroke="currentColor">
+      <animate attributeName="r" begin=".33" calcMode="spline" dur="1.5s" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite" values="0;1.75;0;0" />
+    </circle>
+    <circle cx="8" cy="10" r="0" fill="currentColor" strokeWidth="0.5" stroke="currentColor">
+      <animate attributeName="r" begin="0" calcMode="spline" dur="1.5s" keySplines="0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8;0.2 0.2 0.4 0.8" repeatCount="indefinite" values="0;1.75;0;0" />
+    </circle>
+  </svg>
+);
+
+const ConfidenceIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="w-8 h-8 text-primary">
+    <rect width="10" height="10" x="1" y="1" fill="currentColor" rx="1" strokeWidth="0.5" stroke="#0849bf">
+      <animate id="SVG7JagGz2Y" fill="freeze" attributeName="x" begin="0;SVGgDT19bUV.end" dur="0.2s" values="1;13" />
+      <animate id="SVGpS1BddYk" fill="freeze" attributeName="y" begin="SVGc7yq8dne.end" dur="0.2s" values="1;13" />
+      <animate id="SVGboa7EdFl" fill="freeze" attributeName="x" begin="SVG0ZX9C6Fa.end" dur="0.2s" values="13;1" />
+      <animate id="SVG6rrusL2C" fill="freeze" attributeName="y" begin="SVGTOnnO5Dr.end" dur="0.2s" values="13;1" />
+    </rect>
+    <rect width="10" height="10" x="1" y="13" fill="currentColor" rx="1" strokeWidth="0.5" stroke="#0849bf">
+      <animate id="SVGc7yq8dne" fill="freeze" attributeName="y" begin="SVG7JagGz2Y.end" dur="0.2s" values="13;1" />
+      <animate id="SVG0ZX9C6Fa" fill="freeze" attributeName="x" begin="SVGpS1BddYk.end" dur="0.2s" values="1;13" />
+      <animate id="SVGTOnnO5Dr" fill="freeze" attributeName="y" begin="SVGboa7EdFl.end" dur="0.2s" values="1;13" />
+      <animate id="SVGgDT19bUV" fill="freeze" attributeName="x" begin="SVG6rrusL2C.end" dur="0.2s" values="13;1" />
+    </rect>
+  </svg>
+);
+
+const ConnectionIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="w-8 h-8 text-primary">
+    <g>
+      <rect width="2" height="5" x="11" y="1" fill="currentColor" opacity="0.14" strokeWidth="0.5" stroke="currentColor" />
+      <rect width="2" height="5" x="11" y="1" fill="currentColor" opacity="0.29" transform="rotate(30 12 12)" strokeWidth="0.5" stroke="currentColor" />
+      <rect width="2" height="5" x="11" y="1" fill="currentColor" opacity="0.43" transform="rotate(60 12 12)" strokeWidth="0.5" stroke="currentColor" />
+      <rect width="2" height="5" x="11" y="1" fill="currentColor" opacity="0.57" transform="rotate(90 12 12)" strokeWidth="0.5" stroke="currentColor" />
+      <rect width="2" height="5" x="11" y="1" fill="currentColor" opacity="0.71" transform="rotate(120 12 12)" strokeWidth="0.5" stroke="currentColor" />
+      <rect width="2" height="5" x="11" y="1" fill="currentColor" opacity="0.86" transform="rotate(150 12 12)" strokeWidth="0.5" stroke="currentColor" />
+      <rect width="2" height="5" x="11" y="1" fill="currentColor" transform="rotate(180 12 12)" strokeWidth="0.5" stroke="currentColor" />
+      <animateTransform attributeName="transform" calcMode="discrete" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;30 12 12;60 12 12;90 12 12;120 12 12;150 12 12;180 12 12;210 12 12;240 12 12;270 12 12;300 12 12;330 12 12;360 12 12" />
+    </g>
+  </svg>
+);
 
 const ServicesPage = () => {
   const benefits = [
-    "Personalized assessment of your current communication style",
-    "Tailored strategies for your specific goals and challenges",
-    "Real-time feedback and practice sessions",
-    "Techniques for managing anxiety and building confidence",
-    "Tools for structuring compelling narratives",
-    "Ongoing support and accountability",
+    "Leadership Communication & Executive Presence: Strengthen how leaders communicate and show up in high-stakes environments. Ideal for executives and senior leaders.",
+    "Public Speaking for Leaders: Master the art of delivering impactful presentations and speeches. Ideal for leaders who need to influence and inspire audiences.",
+    "Leadership Visibility & Stakeholder Presence: Enhance visibility and build stronger stakeholder relationships. Ideal for leaders focused on influence and networking.",
+    "Executive Presence [including professional image & etiquette]: Develop the gravitas and authority that commands attention. Ideal for professionals building executive presence.",
   ];
 
   const outcomes = [
     {
-      icon: MessageCircle,
-      title: "Clarity",
-      description: "Communicate complex ideas with precision and impact.",
+      icon: ClarityIcon,
+      title: "Confident Communication for Client-Facing Teams",
+      description: "Build confidence and presence in client interactions. Ideal for professionals in sales, consulting, and customer service.",
     },
     {
-      icon: Sparkles,
-      title: "Confidence",
-      description: "Speak with authentic authority in any situation.",
+      icon: ConfidenceIcon,
+      title: "Professional Presence & Brand Representation",
+      description: "Develop the professional image and etiquette that enhances brand representation. Ideal for client-facing roles.",
     },
     {
-      icon: Target,
-      title: "Connection",
-      description: "Build genuine rapport and influence with your audience.",
+      icon: ConnectionIcon,
+      title: "Communication Under Pressure",
+      description: "Maintain composure and effectiveness in high-pressure client situations. Ideal for teams dealing with challenging client engagements.",
     },
   ];
 
@@ -36,18 +81,17 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
-              SERVICES
+          <div className="max-w-4xl mx-auto text-center -mt-[77px] md:mt-0">
+            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4 opacity-0 animate-fade-up">
+              OUR WORK
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              1:1 Communication
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight opacity-0 animate-fade-up delay-100">
+              Practical, Application-Driven
               <br />
-              <span className="text-primary">Coaching</span>
+              <span className="text-primary">Programmes</span>
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Intensive, personalized coaching designed to transform how you communicate,
-              influence, and lead. Your goals. Your pace. Your breakthrough.
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto opacity-0 animate-fade-up delay-200">
+              Our programmes are practical, application-driven and tailored to organisational context. Delivered through workshops, coaching and speaking, they are designed for immediate and sustained impact.
             </p>
           </div>
         </div>
@@ -58,27 +102,24 @@ const ServicesPage = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
-            <div>
+            <div className="text-center md:text-left">
               <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
-                THE EXPERIENCE
+                CORPORATE PROGRAMMES
               </p>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-                What You Get
+                Leadership & Communication Development
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Every coaching engagement is fully customized to your unique situation,
-                goals, and communication challenges. Whether you're preparing for a
-                high-stakes presentation, developing executive presence, or building
-                overall communication confidence — I meet you where you are.
+                Our programmes strengthen how leaders communicate, show up and influence, particularly where clarity, confidence and credibility are critical.
               </p>
 
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <li key={index} className="flex flex-col md:flex-row items-center md:items-start gap-3">
+                    <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0">
                       <Check className="w-4 h-4 text-primary" />
                     </div>
-                    <span className="text-foreground">{benefit}</span>
+                    <span className="text-foreground text-center md:text-left">{benefit}</span>
                   </li>
                 ))}
               </ul>
@@ -104,14 +145,13 @@ const ServicesPage = () => {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
-              OUTCOMES
+              CLIENT-FACING & CUSTOMER ENGAGEMENT
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              What You'll Achieve
+              Building Confidence in Client Interactions
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Beyond techniques — we build lasting transformation in how you show up
-              and communicate.
+              Programmes designed to enhance communication and presence in client-facing roles.
             </p>
           </div>
 
@@ -119,15 +159,18 @@ const ServicesPage = () => {
             {outcomes.map((outcome, index) => (
               <div
                 key={index}
-                className="bg-card rounded-lg p-8 border border-primary text-center"
+                className="group bg-card rounded-lg p-8 border border-primary md:border-primary/20 md:border-2 hover:border-primary/80 transition-all duration-300 text-center"
               >
-                <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                  <outcome.icon className="w-8 h-8 text-primary" />
+                <div className="text-center mb-4">
+                  <div className="text-3xl font-bold text-primary mb-2">{index + 1}</div>
+                  <div className="w-16 h-16 rounded-lg flex items-center justify-center mx-auto">
+                    <outcome.icon />
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-primary mb-3">
                   {outcome.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-primary leading-relaxed">
                   {outcome.description}
                 </p>
               </div>
@@ -141,51 +184,48 @@ const ServicesPage = () => {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
-              THE PROCESS
+              DELIVERY FORMATS
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              How It Works
+              Flexible Delivery Options
             </h2>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground text-2xl font-bold flex items-center justify-center mx-auto mb-6">
-                  1
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <div className="text-6xl font-bold text-primary">1</div>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">
-                  Discovery Call
+                  In-Person
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  We start with a complimentary call to understand your goals,
-                  challenges, and whether we're a good fit.
+                  Interactive workshops and coaching sessions conducted face-to-face for maximum engagement and impact.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground text-2xl font-bold flex items-center justify-center mx-auto mb-6">
-                  2
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <div className="text-6xl font-bold text-primary">2</div>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">
-                  Custom Plan
+                  Virtual
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  I create a personalized coaching roadmap based on your specific
-                  situation and objectives.
+                  Online workshops and coaching sessions delivered remotely, ensuring accessibility and convenience.
                 </p>
               </div>
 
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground text-2xl font-bold flex items-center justify-center mx-auto mb-6">
-                  3
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <div className="text-6xl font-bold text-primary">3</div>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">
-                  Transform
+                  Hybrid
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Through regular sessions and practice, we build the skills and
-                  confidence that create lasting change.
+                  A combination of in-person and virtual delivery, offering flexibility to meet diverse organisational needs.
                 </p>
               </div>
             </div>
@@ -194,23 +234,24 @@ const ServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-[url('/pre-footer.png')] bg-cover bg-center">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Ready to Begin?
+              Ready to Partner
+              <br />
+              <span className="block text-center">?</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-              Investment in coaching varies based on your goals and engagement length.
-              Let's discuss what's right for you.
+              If you're developing leaders, strengthening client-facing capability or looking for a speaker, we would be glad to explore how we can support your goals.
             </p>
             <Button
               asChild
               size="lg"
               className="rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg px-10 py-6 group"
             >
-              <Link to="/book">
-                Book a Discovery Call
+              <Link to="/contact">
+                Request a Conversation
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>

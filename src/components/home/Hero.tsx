@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
+import React from "react";
 
 const Hero = () => {
   const [currentImage, setCurrentImage] = useState('/roll-1.svg');
@@ -16,32 +17,72 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const lines = [
+    "Show up with confidence.",
+    "Communicate with clarity.",
+    "Lead with presence."
+  ];
+  const fullText = lines.join('\n');
+  const [letterStates, setLetterStates] = useState<boolean[]>(() => new Array(fullText.length).fill(false));
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (currentIndex < fullText.length) {
+      const timer = setTimeout(() => {
+        setLetterStates(prev => {
+          const newStates = [...prev];
+          newStates[currentIndex] = true;
+          return newStates;
+        });
+        setCurrentIndex(prev => prev + 1);
+      }, 3000);
+      return () => clearTimeout(timer);
+    } else if (currentIndex === fullText.length) {
+      const timer = setTimeout(() => {
+        setLetterStates(new Array(fullText.length).fill(false));
+        setCurrentIndex(0);
+      }, 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [currentIndex, fullText.length]);
+
   return (
     <section className="relative min-h-[100vh] md:min-h-[90vh] flex items-center overflow-hidden">
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-black/50 z-10" />
 
       {/* Content */}
-      <div className="container mx-auto px-6 relative z-20 -mt-[150px] md:mt-0">
+      <div className="container mx-auto px-6 relative z-20">
         <div className="flex flex-col lg:flex-row items-center justify-between max-w-6xl">
-          <div className="max-w-4xl lg:mr-12">
-            {/* Eyebrow */}
-            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-6 opacity-0 animate-fade-up">
-              COMMUNICATION COACH
-            </p>
-
+          <div className="max-w-4xl lg:mr-12 text-center md:text-left">
             {/* Main Headline */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-8 opacity-0 animate-fade-up delay-100">
-              <span className="text-foreground">Own Your</span>
+            <h1 className="hidden md:block text-4xl md:text-5xl lg:text-5xl font-bold leading-[0.95] mb-8 opacity-0 animate-fade-up delay-100">
+              <span className="text-foreground">Show up with confidence.</span>
               <br />
-              <span className="text-primary">Voice</span>
-              <span className="text-foreground">.</span>
+              <span className="text-primary">Communicate with clarity.</span>
+              <br />
+              <span className="text-foreground">Lead with presence.</span>
+            </h1>
+
+            <h1 className="block md:hidden text-3xl font-light leading-[0.95] mb-8 opacity-0 animate-fade-up delay-100">
+              {lines.map((line, lineIndex) => (
+                <React.Fragment key={lineIndex}>
+                  {line.split('').map((char, charIndex) => {
+                    const globalIndex = lines.slice(0, lineIndex).reduce((acc, l) => acc + l.length, 0) + charIndex;
+                    return (
+                      <span key={globalIndex} className={letterStates[globalIndex] ? 'text-primary font-bold' : 'text-foreground'}>
+                        {char}
+                      </span>
+                    );
+                  })}
+                  {lineIndex < lines.length - 1 && <br />}
+                </React.Fragment>
+              ))}
             </h1>
 
             {/* Subheadline */}
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed mb-12 opacity-0 animate-fade-up delay-200">
-              Master the art of powerful communication. Command any room.
-              Deliver your message with confidence and conviction.
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed mb-12 opacity-0 animate-fade-up delay-200">
+              We support leaders, professionals and client-facing teams to communicate effectively in high-stakes environments — strengthening leadership communication, executive presence and professional visibility.
             </p>
 
             {/* CTAs */}
@@ -51,8 +92,8 @@ const Hero = () => {
                 size="lg"
                 className="rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg px-8 py-6 group"
               >
-                <Link to="/book">
-                  Work With Me
+                <Link to="/contact">
+                  Request a Conversation
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
@@ -62,7 +103,7 @@ const Hero = () => {
                 size="lg"
                 className="rounded-lg border-border text-foreground hover:bg-secondary hover:text-foreground font-semibold text-lg px-8 py-6"
               >
-                <Link to="/about">Learn More</Link>
+                <Link to="/services">Our Work</Link>
               </Button>
             </div>
           </div>
