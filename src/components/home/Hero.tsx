@@ -86,7 +86,7 @@ const Hero = () => {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-up delay-300 mb-[10px]">
+            <div className="flex flex-col sm:flex-row gap-4 items-center opacity-0 animate-fade-up delay-300 mb-[10px]">
               <Button
                 asChild
                 size="lg"
