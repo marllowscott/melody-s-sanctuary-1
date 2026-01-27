@@ -77,7 +77,7 @@ const About = () => {
             <Button
               asChild
               variant="outline"
-              className="rounded-lg border-border text-foreground hover:bg-background hover:text-foreground font-semibold px-8 mx-auto"
+              className="rounded-lg border-border text-foreground hover:bg-secondary hover:text-foreground font-semibold text-lg px-8 py-6"
             >
               <Link to="/services">
                 Our Work

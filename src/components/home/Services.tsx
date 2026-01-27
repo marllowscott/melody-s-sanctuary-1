@@ -58,7 +58,7 @@ const Services = () => {
           <Button
             asChild
             size="lg"
-            className="rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 group"
+            className="rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg px-8 py-6 group"
           >
             <Link to="/services">
               Our Work

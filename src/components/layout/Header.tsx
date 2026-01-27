@@ -77,7 +77,7 @@ const Header = () => {
                   {link.label}
                 </Link>
               ))}
-              <Button asChild className="mt-4 mx-auto rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold">
+              <Button asChild size="lg" className="mt-4 mx-auto rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg px-8 py-6 group">
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>Request a Conversation</Link>
               </Button>
             </div>
