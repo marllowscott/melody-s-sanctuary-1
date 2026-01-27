@@ -3,8 +3,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const CTA = () => {
+  console.log('CTA component rendering');
   return (
-    <section className="py-32 bg-[url('/pre-footer.png')] bg-cover bg-center relative overflow-hidden">
+    <section className="py-32 bg-none md:bg-[url('/pre-footer.png')] bg-cover bg-center relative overflow-hidden">
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
