@@ -72,7 +72,7 @@ const About = () => {
 
       {/* Values Section */}
       <section className="py-24 bg-background">
-        <div className="container mx-auto px-6">
+        <div className="mx-auto px-6 w-full max-w-full">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
               STRATEGIC OUTCOMES
