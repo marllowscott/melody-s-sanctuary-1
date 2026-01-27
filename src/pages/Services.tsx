@@ -1,7 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Check, Sparkles, Target } from "lucide-react";
+import { Check, Sparkles, Target } from "lucide-react";
 
 const ClarityIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="w-8 h-8 text-primary">
@@ -236,7 +236,7 @@ const ServicesPage = () => {
       {/* CTA Section */}
       <section className="py-24 bg-none md:bg-[url('/pre-footer.png')] bg-cover bg-center">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto">
+          <div className="max-w-4xl lg:mr-12 text-center md:text-left">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Ready to Partner
               <br />
@@ -252,7 +252,6 @@ const ServicesPage = () => {
             >
               <Link to="/contact">
                 Request a Conversation
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
           </div>

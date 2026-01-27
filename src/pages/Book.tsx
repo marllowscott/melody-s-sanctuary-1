@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Send, Calendar, Clock, Video } from "lucide-react";
+import { Calendar, Clock, Video } from "lucide-react";
 
 const Book = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -220,10 +220,7 @@ const Book = () => {
                   {isSubmitting ? (
                     "Sending..."
                   ) : (
-                    <>
-                      Submit Inquiry
-                      <Send className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    </>
+                    "Submit Inquiry"
                   )}
                 </Button>
 

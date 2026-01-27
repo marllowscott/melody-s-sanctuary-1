@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Send, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -198,10 +198,7 @@ const Contact = () => {
                   {isSubmitting ? (
                     "Sending..."
                   ) : (
-                    <>
-                      Send Message
-                      <Send className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    </>
+                    "Send Message"
                   )}
                 </Button>
               </form>

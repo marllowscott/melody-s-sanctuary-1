@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 const CTA = () => {
   console.log('CTA component rendering');
@@ -8,7 +7,7 @@ const CTA = () => {
     <section className="py-32 bg-none md:bg-[url('/pre-footer.png')] bg-cover bg-center relative overflow-hidden">
 
       <div className="mx-auto px-6 relative z-10 w-full max-w-full">
-        <div className="text-center max-w-4xl mx-auto">
+        <div className="max-w-4xl lg:mr-12 text-center md:text-left">
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
             Ready to Elevate Your
             <br />
@@ -24,7 +23,6 @@ const CTA = () => {
           >
             <Link to="/contact">
               Request a Conversation
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
         </div>

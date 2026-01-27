@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import React from "react";
 
@@ -94,7 +93,6 @@ const Hero = () => {
               >
                 <Link to="/contact">
                   Request a Conversation
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
               <Button
