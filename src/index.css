@@ -151,9 +151,27 @@
   }
 }
 
+@keyframes border-flash {
+  0% {
+    border-color: white;
+  }
+
+  50% {
+    border-color: hsl(var(--primary));
+  }
+
+  100% {
+    border-color: white;
+  }
+}
+
 @media (max-width: 768px) {
   .animate-number-flash {
     animation: number-flash 2s infinite;
+  }
+
+  .animate-border-flash {
+    animation: border-flash 2s infinite;
   }
 }
 

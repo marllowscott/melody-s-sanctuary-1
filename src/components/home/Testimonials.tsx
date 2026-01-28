@@ -39,7 +39,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="group bg-card rounded-lg p-8 border-2 border-primary/20 hover:border-primary/80 transition-all duration-300 relative text-center"
+              className="group bg-card rounded-lg p-8 border-2 border-primary/20 hover:border-primary/80 transition-all duration-300 relative text-center animate-border-flash"
             >
               <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
                 <div className="text-6xl font-bold text-primary animate-number-flash">{index + 1}</div>
