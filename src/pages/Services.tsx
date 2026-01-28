@@ -90,7 +90,7 @@ const ServicesPage = () => {
               <br />
               <span className="text-primary">Programmes</span>
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto opacity-0 animate-fade-up delay-200">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-full md:max-w-2xl mx-auto opacity-0 animate-fade-up delay-200">
               Our programmes are practical, application-driven and tailored to organisational context. Delivered through workshops, coaching and speaking, they are designed for immediate and sustained impact.
             </p>
           </div>

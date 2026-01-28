@@ -76,7 +76,7 @@ const Book = () => {
               <br />
               <span className="text-primary">Leadership Consultant</span>
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-full md:max-w-2xl mx-auto">
               Melody specialises in leadership communication, executive presence and visibility. She works with executives, professionals and emerging leaders to strengthen how they show up, communicate and influence, particularly in meetings, presentations, client engagements and other high-stakes moments.
             </p>
           </div>

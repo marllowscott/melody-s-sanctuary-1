@@ -13,7 +13,7 @@ const CTA = () => {
             <br />
             <span className="text-primary">Leadership Impact?</span>
           </h2>
-          <p className="text-xl text-muted-foreground leading-relaxed mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground leading-relaxed mb-10 max-w-full md:max-w-2xl mx-auto">
             Let's explore how we can support your leadership development and communication goals.
           </p>
           <Button

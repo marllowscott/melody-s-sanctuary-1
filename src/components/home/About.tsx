@@ -56,7 +56,7 @@ const About = () => {
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
               OUR APPROACH
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight break-words">
               Addressing the Gap in <span className="text-primary">Leadership Communication</span>
             </h1>
             <div>
