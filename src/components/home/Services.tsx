@@ -1,7 +1,32 @@
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Services = () => {
+  const [displayedText, setDisplayedText] = useState('');
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && displayedText === '') {
+          const text = 'OUR WORK';
+          const letters = text.split('');
+          letters.forEach((letter, index) => {
+            setTimeout(() => {
+              setDisplayedText(prev => prev + letter);
+            }, index * 3000);
+          });
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => observer.disconnect();
+  }, [displayedText]);
+
   const services = [
     {
       title: "Leadership Communication & Executive Presence",
@@ -18,12 +43,12 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section ref={sectionRef} className="py-24 bg-background">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
-            OUR WORK
+            {displayedText}
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Practical, Application-Driven Programmes

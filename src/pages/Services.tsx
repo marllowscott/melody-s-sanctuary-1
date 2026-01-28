@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -51,6 +52,30 @@ const ConnectionIcon = () => (
 );
 
 const ServicesPage = () => {
+  const [displayedText, setDisplayedText] = useState('');
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && displayedText === '') {
+          const text = 'OUR WORK';
+          const letters = text.split('');
+          letters.forEach((letter, index) => {
+            setTimeout(() => {
+              setDisplayedText(prev => prev + letter);
+            }, index * 3000);
+          });
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    return () => observer.disconnect();
+  }, [displayedText]);
+
   const benefits = [
     "Leadership Communication & Executive Presence: Strengthen how leaders communicate and show up in high-stakes environments. Ideal for executives and senior leaders.",
     "Public Speaking for Leaders: Master the art of delivering impactful presentations and speeches. Ideal for leaders who need to influence and inspire audiences.",
@@ -79,11 +104,11 @@ const ServicesPage = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-24 bg-background">
+      <section ref={sectionRef} className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center -mt-[77px] md:mt-0">
-            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4 opacity-0 animate-fade-up">
-              OUR WORK
+            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
+              {displayedText}
             </p>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight opacity-0 animate-fade-up delay-100">
               Practical, Application-Driven
