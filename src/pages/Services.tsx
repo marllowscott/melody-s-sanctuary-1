@@ -85,12 +85,12 @@ const ServicesPage = () => {
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
               OUR WORK
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight opacity-0 animate-fade-up delay-100">
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight break-words opacity-0 animate-fade-up delay-100">
               Practical, Application-Driven
               <br />
               <span className="text-primary">Programmes</span>
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-full md:max-w-2xl mx-auto text-center opacity-0 animate-fade-up delay-200">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-full md:max-w-2xl mx-auto text-center break-words opacity-0 animate-fade-up delay-200">
               Our programmes are practical, application-driven and tailored to organisational context. Delivered through workshops, coaching and speaking, they are designed for immediate and sustained impact.
             </p>
           </div>
