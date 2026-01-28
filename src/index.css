@@ -136,6 +136,27 @@
   animation: mobile-fade 4s infinite 6s;
 }
 
+/* Number flash animation for mobile */
+@keyframes number-flash {
+  0% {
+    color: hsl(var(--primary));
+  }
+
+  50% {
+    color: white;
+  }
+
+  100% {
+    color: hsl(var(--primary));
+  }
+}
+
+@media (max-width: 768px) {
+  .animate-number-flash {
+    animation: number-flash 2s infinite;
+  }
+}
+
 @keyframes mobile-fade {
   0% {
     opacity: 0;

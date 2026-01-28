@@ -195,7 +195,7 @@ const ServicesPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                  <div className="text-6xl font-bold text-primary">1</div>
+                  <div className="text-6xl font-bold text-primary animate-number-flash">1</div>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">
                   In-Person
@@ -207,7 +207,7 @@ const ServicesPage = () => {
 
               <div className="text-center">
                 <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                  <div className="text-6xl font-bold text-primary">2</div>
+                  <div className="text-6xl font-bold text-primary animate-number-flash">2</div>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">
                   Virtual
@@ -219,7 +219,7 @@ const ServicesPage = () => {
 
               <div className="text-center">
                 <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                  <div className="text-6xl font-bold text-primary">3</div>
+                  <div className="text-6xl font-bold text-primary animate-number-flash">3</div>
                 </div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">
                   Hybrid

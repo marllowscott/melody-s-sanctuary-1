@@ -42,7 +42,7 @@ const Testimonials = () => {
               className="group bg-card rounded-lg p-8 border-2 border-primary/20 hover:border-primary/80 transition-all duration-300 relative text-center"
             >
               <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                <div className="text-6xl font-bold text-primary">{index + 1}</div>
+                <div className="text-6xl font-bold text-primary animate-number-flash">{index + 1}</div>
               </div>
               <p className="text-lg text-primary leading-relaxed mb-8">
                 {testimonial.quote}
