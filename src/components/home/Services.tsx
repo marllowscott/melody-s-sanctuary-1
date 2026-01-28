@@ -15,7 +15,7 @@ const Services = () => {
           letters.forEach((letter, index) => {
             setTimeout(() => {
               setDisplayedText(prev => prev + letter);
-            }, index * 3000);
+            }, index * 1090);
           });
         }
       },
