@@ -22,9 +22,13 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold tracking-tight">
-            <span className="text-foreground">MELODY</span>
-            <span className="text-primary">.</span>
+          <Link to="/" className="flex items-center">
+            <img
+              src="/al-logo.svg"
+              alt="AL Leadership Logo"
+              className="h-8 md:h-[70px] w-auto"
+              style={{ filter: 'brightness(0) saturate(100%) invert(73%) sepia(89%) saturate(1592%) hue-rotate(354deg) brightness(101%) contrast(101%)' }}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -51,7 +55,8 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden"
+            style={{ color: '#ffbF00' }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >

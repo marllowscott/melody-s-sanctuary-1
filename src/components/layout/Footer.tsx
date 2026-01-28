@@ -9,9 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="text-3xl font-bold tracking-tight">
-              <span className="text-foreground">MELODY</span>
-              <span className="text-primary">.</span>
+            <Link to="/" className="inline-block mb-4">
+              <img
+                src="/al-logo.svg"
+                alt="AL Leadership Logo"
+                className="h-12 w-auto"
+                style={{ filter: 'brightness(0) saturate(100%) invert(73%) sepia(89%) saturate(1592%) hue-rotate(354deg) brightness(101%) contrast(101%)' }}
+              />
             </Link>
             <p className="mt-4 text-muted-foreground max-w-md leading-relaxed">
               Empowering professionals to communicate with confidence, clarity, and impact.
