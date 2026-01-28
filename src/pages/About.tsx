@@ -31,7 +31,7 @@ const About = () => {
     <Layout>
       {/* Hero Section */}
       <section className="py-24 bg-background">
-        <div className="container mx-auto px-6">
+        <div className="px-6 relative z-10 w-full max-w-full h-full flex flex-col justify-center items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div className="text-center md:text-left -mt-[70px] md:mt-0">
@@ -61,7 +61,6 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary rounded-lg -z-10" />
             </div>
           </div>
         </div>
@@ -100,13 +99,13 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-secondary">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl lg:mr-12 text-center">
+      <section className="py-24 md:py-0 md:h-screen md:flex md:justify-center md:items-center bg-secondary relative overflow-hidden">
+        <div className="w-full h-full flex items-center justify-center px-6">
+          <div className="max-w-4xl text-center">
             <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-6">
               Ready to Partner
               <br />
-              <span className="block text-center">?</span>
+              <span className="block">?</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-10">
               If you're developing leaders, strengthening client-facing capability or looking for a speaker, we would be glad to explore how we can support your goals.
@@ -116,9 +115,7 @@ const About = () => {
               size="lg"
               className="rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg px-7 py-6 group"
             >
-              <Link to="/contact">
-                Request a Conversation
-              </Link>
+              <Link to="/contact">Request a Conversation</Link>
             </Button>
           </div>
         </div>

@@ -27,7 +27,7 @@ const Testimonials = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">CLIENT STORIES</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-6 text-center md:text-left">
             Voices of Transformation
           </h2>
         </div>

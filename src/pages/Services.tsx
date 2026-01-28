@@ -85,7 +85,7 @@ const ServicesPage = () => {
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
               OUR WORK
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight break-words opacity-0 animate-fade-up delay-100">
+            <h1 className="text-2xl md:text-5xl font-bold text-foreground mb-6 leading-tight break-words opacity-0 animate-fade-up delay-100 text-center">
               Practical, Application-Driven
               <br />
               <span className="text-primary">Programmes</span>
@@ -99,14 +99,13 @@ const ServicesPage = () => {
 
       {/* What You Get Section */}
       <section className="py-24 bg-secondary">
-        <div className="container mx-auto px-6">
+        <div className="px-6 relative z-10 w-full max-w-full h-full flex flex-col justify-center items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div className="text-center md:text-left">
               <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">CORPORATE PROGRAMMES</p>
-              <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-6 text-center">
+              <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-6 text-center md:text-left">
                 Leadership<br />
-                ?<br />
                 Communication<br />
                 Development
               </h2>
@@ -135,7 +134,6 @@ const ServicesPage = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-primary rounded-lg -z-10" />
             </div>
           </div>
         </div>
@@ -231,9 +229,9 @@ const ServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-none md:bg-[url('/pre-footer.png')] bg-cover bg-center">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl lg:mr-12 text-center">
+      <section className="py-24 md:py-0 md:h-screen md:flex md:justify-center md:items-center bg-none md:bg-[url('/pre-footer.png')] bg-cover bg-center relative overflow-hidden">
+        <div className="w-full h-full flex items-center justify-center px-6">
+          <div className="max-w-4xl text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Ready to Partner
               <br />
