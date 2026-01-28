@@ -7,7 +7,7 @@ const CTA = () => {
     <section className="py-32 bg-none md:bg-[url('/pre-footer.png')] bg-cover bg-center relative overflow-hidden">
 
       <div className="mx-auto px-6 relative z-10 w-full max-w-full">
-        <div className="max-w-4xl lg:mr-12 text-center md:text-left">
+        <div className="max-w-4xl lg:mr-12 text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
             Ready to Elevate Your
             <br />

@@ -106,7 +106,7 @@ const About = () => {
       {/* CTA Section */}
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl lg:mr-12 text-center md:text-left">
+          <div className="max-w-4xl lg:mr-12 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Ready to Partner
               <br />
