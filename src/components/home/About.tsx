@@ -64,13 +64,13 @@ const About = () => {
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
                 We address that gap. We are a leadership consultancy specialising in human skills development solutions. Our work strengthens how leaders communicate, show up and influence, particularly where clarity, confidence and credibility are critical.
               </p>
-              <ul className="text-lg text-muted-foreground leading-relaxed mb-8 list-disc list-inside">
-                <li>Leadership communication</li>
-                <li>Executive presence</li>
-                <li>Public speaking for leaders</li>
-                <li>Leadership visibility</li>
-                <li>Confidence under pressure</li>
-              </ul>
+              <div className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Leadership communication<br />
+                Executive presence<br />
+                Public speaking for leaders<br />
+                Leadership visibility<br />
+                Confidence under pressure
+              </div>
             </div>
             <Button
               asChild
