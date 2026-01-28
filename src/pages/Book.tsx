@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Calendar, Clock, Video } from "lucide-react";
-import TypewriterText from "@/components/ui/TypewriterText";
 
 const Book = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -69,7 +68,7 @@ const Book = () => {
       <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center mb-16 -mt-[77px] md:mt-0">
-            <TypewriterText className="text-primary font-semibold tracking-[0.3em] text-sm mb-4" text="SPEAKING & COACHING" />
+            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">SPEAKING & COACHING</p>
             <h1 className="text-3xl md:text-6xl font-bold text-foreground mb-6 leading-tight break-words">
               Melody<span className="hidden md:inline"> — </span>Confidence Coach &
               <br />

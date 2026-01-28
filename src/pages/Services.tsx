@@ -1,9 +1,7 @@
-import { useState, useEffect, useRef } from "react";
 import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles, Target } from "lucide-react";
-import TypewriterText from "@/components/ui/TypewriterText";
 
 const ClarityIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="w-8 h-8 text-primary">
@@ -85,7 +83,7 @@ const ServicesPage = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center -mt-[77px] md:mt-0">
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
-              {displayedText}
+              OUR WORK
             </p>
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight opacity-0 animate-fade-up delay-100">
               Practical, Application-Driven
@@ -105,7 +103,7 @@ const ServicesPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div className="text-center md:text-left">
-              <TypewriterText className="text-primary font-semibold tracking-[0.3em] text-sm mb-4" text="CORPORATE PROGRAMMES" />
+              <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">CORPORATE PROGRAMMES</p>
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Leadership & Communication Development
               </h2>
@@ -144,7 +142,7 @@ const ServicesPage = () => {
       <section className="py-24 bg-background">
         <div className="mx-auto px-6 w-full max-w-full">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <TypewriterText className="text-primary font-semibold tracking-[0.3em] text-sm mb-4" text="CLIENT-FACING & CUSTOMER ENGAGEMENT" />
+            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">CLIENT-FACING & CUSTOMER ENGAGEMENT</p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Building Confidence in Client Interactions
             </h2>
@@ -181,7 +179,7 @@ const ServicesPage = () => {
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <TypewriterText className="text-primary font-semibold tracking-[0.3em] text-sm mb-4" text="DELIVERY FORMATS" />
+            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">DELIVERY FORMATS</p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Flexible Delivery Options
             </h2>

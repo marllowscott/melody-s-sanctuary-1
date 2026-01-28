@@ -2,7 +2,6 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Award, BookOpen, Users, Heart } from "lucide-react";
-import TypewriterText from "@/components/ui/TypewriterText";
 
 const About = () => {
   const values = [
@@ -36,7 +35,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div className="text-center md:text-left -mt-[70px] md:mt-0">
-              <TypewriterText className="text-primary font-semibold tracking-[0.3em] text-sm mb-4" text="WHO WE SERVE" />
+              <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">WHO WE SERVE</p>
               <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
                 Partners in Leadership
                 <br />
@@ -73,7 +72,7 @@ const About = () => {
       <section className="py-24 bg-background">
         <div className="mx-auto px-6 w-full max-w-full">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <TypewriterText className="text-primary font-semibold tracking-[0.3em] text-sm mb-4" text="STRATEGIC OUTCOMES" />
+            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">STRATEGIC OUTCOMES</p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               What We Achieve
             </h2>

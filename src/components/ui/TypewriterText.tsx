@@ -27,10 +27,16 @@ const TypewriterText = ({ text, className = "", as: Component = "p" }: Typewrite
       },
       { threshold: 0.1 }
     );
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-    return () => observer.disconnect();
+    // Delay observation to avoid triggering on initial load
+    const timer = setTimeout(() => {
+      if (ref.current) {
+        observer.observe(ref.current);
+      }
+    }, 100);
+    return () => {
+      clearTimeout(timer);
+      observer.disconnect();
+    };
   }, [text]);
 
   return (
