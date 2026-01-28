@@ -19,7 +19,7 @@ const CTA = () => {
           <Button
             asChild
             size="lg"
-            className="rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg px-8 py-6 group"
+            className="rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg px-7 py-6 group"
           >
             <Link to="/contact">
               Request a Conversation
