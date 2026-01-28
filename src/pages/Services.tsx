@@ -104,7 +104,7 @@ const ServicesPage = () => {
             {/* Content */}
             <div className="text-center md:text-left">
               <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">CORPORATE PROGRAMMES</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 break-words">
                 Leadership & Communication Development
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
@@ -117,7 +117,7 @@ const ServicesPage = () => {
                     <div className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0">
                       <Check className="w-4 h-4 text-primary" />
                     </div>
-                    <span className="text-foreground text-center md:text-left">{benefit}</span>
+                    <span className="text-foreground text-center md:text-left break-words">{benefit}</span>
                   </li>
                 ))}
               </ul>
