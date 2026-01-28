@@ -104,8 +104,11 @@ const ServicesPage = () => {
             {/* Content */}
             <div className="text-center md:text-left">
               <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">CORPORATE PROGRAMMES</p>
-              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 break-words">
-                Leadership & Communication Development
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-center">
+                Leadership<br />
+                ?<br />
+                Communication<br />
+                Development
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
                 Our programmes strengthen how leaders communicate, show up and influence, particularly where clarity, confidence and credibility are critical.
