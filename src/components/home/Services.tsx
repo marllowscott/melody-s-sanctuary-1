@@ -23,7 +23,7 @@ const Services = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">OUR WORK</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-6">
             Practical, Application-Driven Programmes
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">

@@ -146,7 +146,7 @@ const ServicesPage = () => {
         <div className="mx-auto px-6 w-full max-w-full">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">CLIENT-FACING & CUSTOMER ENGAGEMENT</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-6">
               Building Confidence in Client Interactions
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -183,7 +183,7 @@ const ServicesPage = () => {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">DELIVERY FORMATS</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-6">
               Flexible Delivery Options
             </h2>
           </div>

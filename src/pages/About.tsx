@@ -73,7 +73,7 @@ const About = () => {
         <div className="mx-auto px-6 w-full max-w-full">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">STRATEGIC OUTCOMES</p>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-6">
               What We Achieve
             </h2>
           </div>
@@ -103,7 +103,7 @@ const About = () => {
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl lg:mr-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="text-2xl md:text-5xl font-bold text-foreground mb-6">
               Ready to Partner
               <br />
               <span className="block text-center">?</span>
