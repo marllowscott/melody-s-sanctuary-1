@@ -7,13 +7,15 @@ interface TypewriterTextProps {
 }
 
 const TypewriterText = ({ text, className = "", as: Component = "p" }: TypewriterTextProps) => {
-  const [displayedText, setDisplayedText] = useState('');
-  const ref = useRef<HTMLElement>(null);
+  const [displayedText, setDisplayedText] = useState(text);
+  const hasTypedRef = useRef(false);
+  const ref = useRef<any>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && !hasTypedRef.current) {
+          hasTypedRef.current = true;
           setDisplayedText('');
           const letters = text.split('');
           letters.forEach((letter, index) => {
