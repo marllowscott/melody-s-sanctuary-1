@@ -71,7 +71,7 @@ const Book = () => {
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
               SPEAKING & COACHING
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-3xl md:text-6xl font-bold text-foreground mb-6 leading-tight break-words">
               Melody<span className="hidden md:inline"> — </span>Confidence Coach &
               <br />
               <span className="text-primary">Leadership Consultant</span>
@@ -91,7 +91,7 @@ const Book = () => {
                 <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <div className="text-6xl font-bold text-primary">{index + 1}</div>
                 </div>
-                <p className="text-lg text-primary leading-relaxed mb-8">
+                <p className="text-lg text-primary leading-relaxed mb-8 max-w-full">
                   {feature.description}
                 </p>
                 <div>
