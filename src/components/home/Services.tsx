@@ -82,8 +82,9 @@ const Services = () => {
         <div className="text-center">
           <Button
             asChild
+            variant="outline"
             size="lg"
-            className="rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold text-lg px-8 py-6 group"
+            className="rounded-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-lg px-8 py-6 group"
           >
             <Link to="/services">
               Our Work
