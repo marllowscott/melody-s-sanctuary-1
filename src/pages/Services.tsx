@@ -3,6 +3,7 @@ import Layout from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Check, Sparkles, Target } from "lucide-react";
+import TypewriterText from "@/components/ui/TypewriterText";
 
 const ClarityIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="w-8 h-8 text-primary">
@@ -52,30 +53,6 @@ const ConnectionIcon = () => (
 );
 
 const ServicesPage = () => {
-  const [displayedText, setDisplayedText] = useState('');
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && displayedText === '') {
-          const text = 'OUR WORK';
-          const letters = text.split('');
-          letters.forEach((letter, index) => {
-            setTimeout(() => {
-              setDisplayedText(prev => prev + letter);
-            }, index * 50);
-          });
-        }
-      },
-      { threshold: 0.1 }
-    );
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-    return () => observer.disconnect();
-  }, [displayedText]);
-
   const benefits = [
     "Leadership Communication & Executive Presence: Strengthen how leaders communicate and show up in high-stakes environments. Ideal for executives and senior leaders.",
     "Public Speaking for Leaders: Master the art of delivering impactful presentations and speeches. Ideal for leaders who need to influence and inspire audiences.",
@@ -104,7 +81,7 @@ const ServicesPage = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section ref={sectionRef} className="py-24 bg-background">
+      <section className="py-24 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center -mt-[77px] md:mt-0">
             <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
@@ -128,9 +105,7 @@ const ServicesPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div className="text-center md:text-left">
-              <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
-                CORPORATE PROGRAMMES
-              </p>
+              <TypewriterText className="text-primary font-semibold tracking-[0.3em] text-sm mb-4" text="CORPORATE PROGRAMMES" />
               <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Leadership & Communication Development
               </h2>
@@ -169,9 +144,7 @@ const ServicesPage = () => {
       <section className="py-24 bg-background">
         <div className="mx-auto px-6 w-full max-w-full">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
-              CLIENT-FACING & CUSTOMER ENGAGEMENT
-            </p>
+            <TypewriterText className="text-primary font-semibold tracking-[0.3em] text-sm mb-4" text="CLIENT-FACING & CUSTOMER ENGAGEMENT" />
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Building Confidence in Client Interactions
             </h2>
@@ -208,9 +181,7 @@ const ServicesPage = () => {
       <section className="py-24 bg-secondary">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
-              DELIVERY FORMATS
-            </p>
+            <TypewriterText className="text-primary font-semibold tracking-[0.3em] text-sm mb-4" text="DELIVERY FORMATS" />
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
               Flexible Delivery Options
             </h2>

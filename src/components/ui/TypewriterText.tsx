@@ -1,0 +1,41 @@
+import { useState, useEffect, useRef } from "react";
+
+interface TypewriterTextProps {
+  text: string;
+  className?: string;
+  as?: keyof JSX.IntrinsicElements;
+}
+
+const TypewriterText = ({ text, className = "", as: Component = "p" }: TypewriterTextProps) => {
+  const [displayedText, setDisplayedText] = useState('');
+  const ref = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setDisplayedText('');
+          const letters = text.split('');
+          letters.forEach((letter, index) => {
+            setTimeout(() => {
+              setDisplayedText(prev => prev + letter);
+            }, index * 50);
+          });
+        }
+      },
+      { threshold: 0.1 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => observer.disconnect();
+  }, [text]);
+
+  return (
+    <Component ref={ref} className={className}>
+      {displayedText}
+    </Component>
+  );
+};
+
+export default TypewriterText;

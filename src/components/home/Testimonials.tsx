@@ -1,3 +1,5 @@
+import TypewriterText from "@/components/ui/TypewriterText";
+
 const Testimonials = () => {
   const testimonials = [
     {
@@ -26,9 +28,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
-            CLIENT STORIES
-          </p>
+          <TypewriterText className="text-primary font-semibold tracking-[0.3em] text-sm mb-4" text="CLIENT STORIES" />
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Voices of Transformation
           </h2>

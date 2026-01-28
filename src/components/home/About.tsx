@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import TypewriterText from "@/components/ui/TypewriterText";
 import { Button } from "@/components/ui/button";
 
 // Schema.org JSON-LD for Person
@@ -53,9 +54,7 @@ const About = () => {
 
           {/* Content */}
           <div className="text-center md:text-left mt-[77px] md:mt-0">
-            <p className="text-primary font-semibold tracking-[0.3em] text-sm mb-4">
-              OUR APPROACH
-            </p>
+            <TypewriterText className="text-primary font-semibold tracking-[0.3em] text-sm mb-4" text="OUR APPROACH" />
             <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-6 leading-tight break-words">
               Addressing the Gap in <span className="text-primary">Leadership Communication</span>
             </h1>
