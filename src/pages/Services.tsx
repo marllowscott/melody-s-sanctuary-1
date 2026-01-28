@@ -64,7 +64,7 @@ const ServicesPage = () => {
           letters.forEach((letter, index) => {
             setTimeout(() => {
               setDisplayedText(prev => prev + letter);
-            }, index * 1000);
+            }, index * 50);
           });
         }
       },
